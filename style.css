@@ -1,0 +1,161 @@
+  @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+
+  /* ############################################### html tags styling ################################################################ */
+  *{
+     padding:0;
+     margin:0;
+     box-sizing:border-box;
+   }
+  body{
+         font-size:62.5%;
+         font-family: 'Kalam', cursive;
+      } 
+  /* ##########################################password element styling ###############################################     */
+  .main{
+            background: linear-gradient(135deg, #b9c2ef 10%, #9ff2e3 100%);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+      }
+  .box{
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.122);
+            background: linear-gradient(135deg, #acb6e5 10%, #9ef1e2 100%);
+            width:32%;
+            min-height:70vh;
+            padding:1rem;
+            /* display:flex;
+            flex-wrap:wrap;
+            justify-content:space-between; */
+            
+      }    
+
+ .row{
+      display:flex;
+      justify-content:space-between;
+      font-size:1.8rem;
+      padding-bottom:1.5rem;
+      margin-top:2rem;
+    }   
+ .pass-box{
+       background:white;
+       padding:0.5rem;
+       font-size:1.4rem;
+       text-align:center;
+       border-radius:1rem;
+       min-width:80%;
+       max-width:100%;
+     } 
+ .btn{
+       padding:0.5rem;
+       text-align:center;
+       font-size:1.5rem;
+       z-index:4;
+       margin:auto;
+       background-color:#86fde8;
+       font-weight:500;
+       outline:none;
+       border-radius:2rem;
+       font-weight: 700;
+       border:none;
+       box-shadow: -3px 2px 37px -9px rgba(83,3,3,0.63);
+-webkit-box-shadow: -3px 2px 37px -9px rgba(83,3,3,0.63);
+-moz-box-shadow: -3px 2px 37px -9px rgba(83,3,3,0.63);
+     }    
+label{
+         user-select: none;
+}
+.right input[type='checkbox']    {
+    display:inline-block;
+    background-color: rgb(241, 241, 241);
+    height:2rem;
+    width:4rem;
+    border:none;
+    outline:none;
+}
+.right input[type='number']    {
+  display:inline-block;
+  background-color: rgb(255, 255, 255);
+  height:2rem;
+  width:8rem;
+  border:none;
+  outline:none;
+}
+.btn:hover{
+       background-color:#ffffff;
+       transition:all 0.4s ease-in-out;
+       z-index:2;
+}
+
+/* ############################################### media query ################################################################### */
+@media (min-width:851px) and (max-width:1380px){
+  
+          .box{
+                  width:45%;
+          }
+}
+@media (min-width:800px) and (max-width:850px){
+  
+  .box{
+          width:45%;     
+     }
+  .row{
+        padding-bottom:1.2rem;
+        font-size:1.6rem;
+      }
+}
+@media (min-width:530px) and (max-width:800px){
+  
+  .box{
+          width:58%;
+      }
+  .row{
+        padding-bottom:1.2rem;
+        font-size:1.6rem;
+  }    
+  /* .pass-box{
+    font-size:1.6rem;
+  }  */
+  .btn{
+          font-size:1.3rem;
+  }
+  .right input[type='checkbox']    {
+      height:1rem;
+      width:2.5rem;
+   }
+  .right input[type='number']    {
+    height:2rem;
+    width:4rem;
+  }
+}
+
+@media (min-width:300px) and (max-width:530px){
+  
+  .box{
+          width:87%;
+          min-height:15vh;
+      }
+  .row{
+        padding-bottom:1rem;
+        font-size:1.2rem;
+  }       
+  /* .pass-box{
+    font-size:1.4rem;
+  }    */
+  .btn{
+        font-size:1rem;
+    }  
+  .right input[type='checkbox']    {
+      height:1rem;
+      width:2.5rem;
+   }  
+   .right input[type='number']    {
+    height:2rem;
+    width:3rem;
+  }
+}
+@media (min-width:8px) and (max-width:1000px){
+  .pass-box{
+          font-size:1.0rem;
+     }  
+    }
