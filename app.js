@@ -94,8 +94,6 @@ function colorChange()
           {
             btn.style.background = 'rgb(2,0,36)';
             btn.style.background = 'linear-gradient(146deg, rgba(2,0,36,1) 0%, rgba(215,51,33,1) 27%, rgba(0,212,255,1) 100%)';
-            btn.style.background = 'linear-gradient(146deg, rgba(2,0,36,1) 0%, rgba(215,51,33,1) 27%, rgba(0,212,255,1) 100%)';
-            btn.textContent="Can't Generate!!";
           }
 function passLenCheck(len)
    {
