@@ -4,70 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Password Generator">
+    <meta name="keywords" content="Password, Password Generator, Security">
+    <meta name="author" content="Ayon Sinha">
     <title>Password Generator</title>
     <link rel="stylesheet" href="style.css">
     <script src="app.js" defer></script>
 </head>
 <body>
-    <div class="main">
-         <div class="box">
-            <div class="pass-box">
-                    CREATE PASSWORD
-            </div>
-            <div class="row">
-                <label for="passLen">
-                <div class="left">
-                      PassWord-Length
-                </div>
+    <main class="main">
+        <article class="box">
+          <header class="pass-box">
+            CREATE PASSWORD
+          </header>
+          <section class="row">
+            <label for="passLen">
+              <div class="left">
+                PassWord-Length
+              </div>
             </label>
-                <div class="right">
-                    <input type="number" name="" id="passLen">
-                </div>
+            <div class="right">
+              <input type="number" min="0" max="54" maxlength="2" value="12" name="passLength" id="passLen">
             </div>
-            <div class="row">
-                <label for="upper-case">
-                <div class="left">
-                      UpperCase
-                </div>
+          </section>
+          <section class="row">
+            <label for="upper-case">
+              <div class="left">
+                UpperCase
+              </div>
             </label>
-                <div class="right">
-                    <input type="checkbox" name="" id="upper-case">
-                </div>
+            <div class="right">
+              <input type="checkbox" name="" id="upper-case">
             </div>
-            <div class="row">
-                <label for="lower-case">
-                <div class="left">
-                      LowerCase
-                </div>
+          </section>
+          <section class="row">
+            <label for="lower-case">
+              <div class="left">
+                LowerCase
+              </div>
             </label>
-                <div class="right">
-                    <input type="checkbox" name="" id="lower-case">
-                </div>
+            <div class="right">
+              <input type="checkbox" name="" id="lower-case">
             </div>
-            <div class="row">
-                <label for="numbers">
-                <div class="left">
-                      Numbers
-                </div>
+          </section>
+          <section class="row">
+            <label for="numbers">
+              <div class="left">
+                Numbers
+              </div>
             </label>
-                <div class="right">
-                    <input type="checkbox" name="" id="numbers">
-                </div>
+            <div class="right">
+              <input type="checkbox" name="" id="numbers">
             </div>
-            <div class="row">
-                <label for="special-char">
-                <div class="left">
-                      Special-characters
-                </div>
+          </section>
+          <section class="row">
+            <label for="special-char">
+              <div class="left">
+                Special-characters
+              </div>
             </label>
-                <div class="right">
-                    <input type="checkbox" name="" id="special-char">
-                </div>
+            <div class="right">
+              <input type="checkbox" name="" id="special-char">
             </div>
-            <div class="row">
-                <button class="btn">Generate Password</button>
-            </div>
-         </div>
-    </div>
+          </section>
+          <section class="row">
+            <button class="btn">Generate Password</button>
+          </section>
+        </article>
+      </main>
+      
 </body>
 </html>

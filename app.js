@@ -10,7 +10,6 @@ const symbol=document.getElementById("special-char");
 const passLen=document.getElementById("passLen");
 const btn=document.querySelector(".btn");
 const passBox=document.querySelector(".pass-box");
-console.log(passLen.value);
 
 
 
@@ -43,7 +42,7 @@ function passwordGenerator(password="")
             return passwordGenerator(password);
           } 
       else{
-             return  password;
+             return password;
           }    
     }
 var password;
@@ -95,25 +94,33 @@ function colorChange()
             btn.style.background = 'rgb(2,0,36)';
             btn.style.background = 'linear-gradient(146deg, rgba(2,0,36,1) 0%, rgba(215,51,33,1) 27%, rgba(0,212,255,1) 100%)';
           }
+  
+/*by adding the attributes 'min' and 'max' to the input field controlling 
+the maximum and minimum allowed characters makes a lot of these checks redundant as the user won't be able to exceed 55 chars or use negative values
+it's better to disable the button rather than removing the entire event listener from it */
 function passLenCheck(len)
    {
       if(len<=0)
          {
-          console.log(len);
            passBox.textContent="Password length must be >0";
            colorChange();
+         }
+         else if(len == 54){
+          passBox.textContent="Max supported password length reached";
          }
       else if(len>=55)
           {
             passBox.textContent="Password length must be <55";
-            btn.removeEventListener("click", passwordCreation);
+           // btn.removeEventListener("click", passwordCreation);
+           btn.disabled = true;
             colorChange();
           }   
       else{
            passBox.textContent="CREATE PASSWORD";
            btn.style.background = '#86fde6';
            btn.textContent="Generate Password";
-           btn.addEventListener("click",passwordCreation);
+          // btn.addEventListener("click",passwordCreation);
+          btn.disabled = false;
            btn.addEventListener('mouseover', function() {
             btn.style.backgroundColor = 'white';
           });
@@ -122,17 +129,16 @@ function passLenCheck(len)
             btn.style.backgroundColor = '#86fde8';
           })
            
-          }
+          }    
+
    }
 function debouncePost(func)
        { let timeOutId;
             return function(e)
                        {
-                        console.log("hi called");
                             if(timeOutId)
                                {
                                  clearTimeout(timeOutId);
-                                 console.log("hi cleared");
                                }
                             timeOutId=setTimeout(func(e.target.value),300);    
                        }
