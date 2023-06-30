@@ -82,9 +82,7 @@ function passLenCheck(len) {
   if (len <= 0) {
     passBox.textContent = "Password length must be >0";
     colorChange();
-  } else if (len == 54) {
-    passBox.textContent = "Max supported password length reached";
-  } else if (len >= 55) {
+  } else if (len >= 54) {
     passBox.textContent = "Password length must be <55";
     // btn.removeEventListener("click", passwordCreation);
     btn.disabled = true;
